@@ -1,0 +1,190 @@
+* { margin: 0; padding: 0; box-sizing: border-box; }
+
+body {
+    font-family: 'Segoe UI', Arial, sans-serif;
+    background-color: #f5f7fa;
+    color: #333;
+    line-height: 1.6;
+}
+
+/* =*= MENU DE NAVEGAÇÃO === */
+nav {
+    background-color: white;
+    padding: 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.logo {
+    font-size: 22px;
+    font-weight: bold;
+    color: #667eea;
+}
+
+.menu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+.menu a {
+    color: #555;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 14px;
+    border-radius: 6px;
+    transition: all 0.3s;
+}
+
+.menu a:hover { background-color: #f5f7fa; color: #667eea; }
+.menu a.ativo { background-color: #667eea; color: white; }
+
+/* === HEADER === */
+header {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    padding: 80px 30px;
+    text-align: center;
+    margin: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+}
+
+header h1 { font-size: 48px; margin-bottom: 10px; }
+.subtitulo { font-size: 20px; opacity: 0.95; font-style: italic; }
+
+/* === CONTEÚDO === */
+main { max-width: 900px; margin: 0 auto; padding: 0 20px; }
+
+section {
+    background-color: white;
+    padding: 30px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+}
+
+h2 {
+    color: #667eea;
+    margin-bottom: 15px;
+    padding-bottom: 10px;
+    border-bottom: 3px solid #f5f7fa;
+}
+
+h3 { color: #764ba2; margin-bottom: 10px; }
+p { margin-bottom: 12px; }
+
+ul { list-style: none; }
+ul li { padding: 8px 0; padding-left: 25px; position: relative; }
+ul:not(.menu):not(.contactos) li::before {
+    content: "."; color: #667eea; font-weight: bold;
+    position: absolute; left: 0;
+}
+ul.contactos li { padding-left: 0; }
+
+a { color: #667eea; text-decoration: none; font-weight: 600; }
+a:hover { text-decoration: underline; }
+strong { color: #555; }
+
+/* === GRELHA DE PROJETOS === */
+.projetos-grelha {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 20px;
+    background: none;
+    box-shadow: none;
+    padding: 0;
+}
+
+.projeto {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+    transition: transform 0.3s;
+}
+
+.projeto:hover { transform: translateY(-5px); }
+
+.tag {
+    display: inline-block;
+    background-color: #667eea;
+    color: white;
+    padding: 4px 12px;
+    border-radius: 20px;
+    font-size: 12px;
+    margin-top: 10px;
+    font-weight: 600;
+}
+
+/* === RODAPÉ === */
+footer{
+    text-align: center;
+    padding: 30px;
+    margin-top: 50px;
+    color: #888;
+    font-size: 14px;
+}
+
+/* === BOTÃO DE TEMA === */
+.botao-tema {
+    background: #f5f7fa;
+    border: none;
+    padding: 8px 16px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: all 0.3s;
+}
+
+.botao-tema:hover { background: #667eea; color: white; }
+
+/* === RELÓGIO === */
+.relogio {
+    margin-top: 20px;
+    font-size: 18px;
+    font-weight: 600;
+    background: rgba(255,255,255,0.2);
+    padding: 8px 20px;
+    border-radius: 20px;
+    display: inline-block;
+}
+
+/* === BOTÃO GERAL === */
+.botao {
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border: none;
+    padding: 12px 24px;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-top: 15px;
+    transition: transform 0.2s;
+}
+
+.botao:hover { transform: translateY(-2px); }
+
+/* === TEMA ESCURO === */
+body { transition: background-color 0.3s, color 0.3s; }
+
+body.tema-escuro {
+    background-color: #1a1a2e;
+    color: #e0e0e0;
+}
+
+body.tema-escuro nav { background-color: #16213e; }
+body.tema-escuro .logo { color: #a4b0f5; }
+body.tema-escuro .menu a { color: #ccc; }
+body.tema-escuro .menu a:hover { background-color: #0f3460; }
+body.tema-escuro section { background-color: #16213e; color: #e0e0e0; }
+body.tema-escuro strong { color: #a4b0f5; }
+body.tema-escuro h2 { color: #a4b0f5; border-bottom-color: #0f3460; }
+body.tema-escuro .projeto { background-color: #16213e; }
+body.tema-escuro .botao-tema { background: #0f3460; color: #e0e0e0; }
